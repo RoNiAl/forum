@@ -1,0 +1,80 @@
+//Fonts
+
+@font-face {
+  font-family: 'Gilroy';           /* название одно */
+  src: url('../fonts/Gilroy-ExtraBold.otf'); /* разные файлы */
+  font-weight: 700;              /* разная плотность */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';           /* название одно */
+  src: url('../fonts/Gilroy-Light.otf'); /* разные файлы */
+  font-weight: 300;              /* разная плотность */
+  font-style: normal;
+}
+
+a{
+  text-decoration: none;
+}
+
+// Main
+h2{
+  font-family: "Gilroy", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.btn{
+  width: 285px;
+  height: 75px;
+  background-color: #5BA43A;
+  border: none;
+  color: #fff;
+
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  line-height: 75px;
+  text-transform: uppercase;
+
+}
+
+
+//Nav
+.header__wrap{
+  padding: 0 60px 0 60px;
+
+  nav{
+    padding: 25px 0 25px 0;
+    display: flex;
+    justify-content: space-between;
+    
+    .nav__elements{
+      font-family: "Rubik", sans-serif;
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+
+      .nav__element{
+        font-size: 18px;
+        line-height: 55px;
+
+        a{
+          color: #000000;
+        }
+      }
+      
+      
+    }
+
+    .nav__btn{
+      .btn_nav{
+        width: 250px;
+        height: 55px;
+        font-size: 14px;
+        line-height: 55px;
+      }
+    }
+  }
+}
