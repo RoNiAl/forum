@@ -346,32 +346,3 @@ p {
   left: -30px;
   bottom: 40%;
 }
-.specialists .specialists__title {
-  margin-bottom: 60px;
-}
-.specialists .slider {
-  text-align: center;
-}
-.specialists .slider img {
-  border-radius: 50%;
-  margin: 0 auto 60px auto;
-}
-.specialists .slider .slider__title {
-  margin-bottom: 20px;
-  font-size: 30px;
-  text-transform: uppercase;
-}
-.specialists .slider .slider__about {
-  font-size: 18px;
-  color: #5BA43A;
-}
-.specialists .slideshow__arrows {
-  position: relative;
-  bottom: -120px;
-}
-.specialists .slideshow__arrow {
-  width: 80px;
-  height: 100px;
-  bottom: 600px;
-  position: relative;
-}

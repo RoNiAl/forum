@@ -8,12 +8,25 @@
     <link rel="stylesheet" href="">
     <title>Forum</title>
 
+
+
     <!--Style-->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
 
     <!--Font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400" rel="stylesheet">
+
+    <!--JQuery-->
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <!--SLICK SLIDER-->
+    <link rel="stylesheet" href="lib/slick.css">
+    <script src="lib/slick.min.js"></script>
+    <link rel="stylesheet" href="../Users/Akramion/Desktop/Программирование/sliders/css/slide3.css">
 </head>
 <body>
 
@@ -123,5 +136,100 @@
         </div>
     </section>
 
+    <section class="program">
+        <div class="program__wrap">
+            <div class="program__left-info">
+                <div class="left-info__wrap">
+                    <h2 class="program__title">Программа форума</h2>
+                    <p class="program__text">Заполните форму, и мы направим вам на почту программу</p>
+                    <a href="#" class="btn btn_program">Получить программу</a>
+                </div>
+            </div>
+            <div class="program__right-bg">
+
+            </div>
+        </div>
+    </section>
+
+    <!--PRICE-->
+
+    <section class="price">
+        <div class="block">
+            <h2 class="price__title">Стоимость <br> участия</h2>
+            <div class="price__wrap">
+                <div class="price__item">
+                    <h3 class="price__roll">Участник</h3>
+                    <p class="price__sum">15 000 Р</p>
+                    <p class="price__include">Включено</p>
+                    <hr class="price__line">
+                    <ul class="price__list">
+                        <li class="price__item">участие в конференции 12-13 ноября 2018</li>
+                        <li class="price__item">входной пакет с раздаточными материалами</li>
+                        <li class="price__item">доступ к информационным материалам и презентациям докладчиков (после форума)</li>
+                        <li class="price__item">кофе-брейки, обеды и ужин по программе</li>
+                        <li class="price__item">участие в развлекательной программе</li>
+                        <li class="price__item">фотоматериалы с форума (рассылка после форума)</li>
+                    </ul>
+                </div>
+
+                <div class="price__item">
+                    <h3 class="price__roll">Участник</h3>
+                    <p class="price__sum">15 000 Р</p>
+                    <p class="price__include">Включено</p>
+                    <hr class="price__line">
+                    <ul class="price__list">
+                        <li class="price__item">участие в конференции 12-13 ноября 2018</li>
+                        <li class="price__item">входной пакет с раздаточными материалами</li>
+                        <li class="price__item">доступ к информационным материалам и презентациям докладчиков (после форума)</li>
+                        <li class="price__item">кофе-брейки, обеды и ужин по программе</li>
+                        <li class="price__item">участие в развлекательной программе</li>
+                        <li class="price__item">фотоматериалы с форума (рассылка после форума)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="specialists">
+        <div class="block">
+            <h2 class="specialists__title">Эксперты и докладчики форума</h2>
+            <hr class="line">
+            <div class="slider">
+
+                <div class="slider__slide">
+                    <img src="image/spec_slide1.png" alt="">
+                    <h4 class="slider__title">Иван Перторв</h4>
+                    <p class="slider__about">Хороший человек</p>
+                </div>
+
+                <div class="slider__slide">
+                    <img src="image/spec_slide2.png" alt="">
+                    <h4 class="slider__title">Иван Перторв</h4>
+                    <p class="slider__about">Хороший человек</p>
+                </div>
+
+                <div class="slider__slide">
+                    <img src="image/spec_slide3.png" alt="">
+                    <h4 class="slider__title">Иван Перторв</h4>
+                    <p class="slider__about">Хороший человек</p>
+                </div>
+
+            </div>
+            <div class="slideshow__arrows"></div>
+        </div>
+    </section>
+
+
+    <script>
+
+        $(document).ready(function(){
+            $('.slider').slick({
+
+                appendArrows: $('.slideshow__arrows'),
+                prevArrow: '<button class="slideshow__arrow_left slideshow__arrow"><img src="image/left_arrow.png"></button>',
+                nextArrow: '<button class="slideshow__arrow_right slideshow__arrow"><img src="image/right_arrow.png"></button>'
+        });
+        });
+    </script>
 </body>
 </html>
