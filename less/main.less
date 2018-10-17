@@ -25,6 +25,10 @@ h1, h2, h3, h4, h5, h6{
   font-size: 64px;
 }
 
+h2{
+  line-height: 1.3;
+}
+
 .btn{
   width: 285px;
   height: 75px;
@@ -56,6 +60,11 @@ p{
 .block{
   width: 1250px;
   margin: 0 auto;
+
+  //padding:0 25px;
+  //margin:0 auto;
+  //max-width: 1160px;
+  //width:~"calc(100% - 420px)";
 }
 
 //Nav
@@ -427,7 +436,39 @@ p{
 
 //specialists
 
+.specialists:before, .specialists:after{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.specialists:before{
+  content: '';
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  top: -280px;
+  background-image: url('../image/specialists_roks.png');
+  background-position: right center;
+}
+
+.specialists:after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 300px;
+  width: 20%;
+  height: 100%;
+  background-image: url('../image/specialists_roks2.png');
+  background-position: right center;
+}
+
+
+
 .specialists{
+  position: relative;
+  padding-top: 60px;
+  background-color: #F6F6F6;
 
   .specialists__title{
     margin-bottom: 60px;
@@ -455,15 +496,183 @@ p{
   }
 
   .slideshow__arrows{
-    position: relative;
-    bottom: -120px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .slideshow__arrow {
+    position: relative;
     width: 80px;
     height: 100px;
-    bottom: 600px;
-    position: relative;
+    top: -300px;
 
+  }
+
+  .slideshow__arrow_right{
+    left: 100px;
+  }
+
+  .slideshow__arrow_left{
+    right: 100px;
+  }
+}
+
+//SUPPORT
+.support{
+  padding-top: 60px;
+  .support__title{
+    margin-bottom: 50px;
+  }
+  
+  .support__slide{
+    text-align: center;
+
+    img{
+      height: 250px;
+      margin: 0 auto;
+    }
+  }
+
+}
+
+//SLIDER ARROWS
+.support__arrows{
+  display: flex;
+  justify-content: space-between;
+}
+
+.support__arrow_left, .support__arrow_right{
+  position: relative;
+  bottom: 180px;
+}
+
+.support__arrow_left{
+  right: 100px;
+}
+
+.support__arrow_right{
+  left: 100px;
+}
+
+// SLIDER DOTS
+.slick-dots{
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  bottom: -50px;
+
+  li{
+    margin-right: 20px;
+    display: inline-block;
+
+    button{
+      text-indent: -9999px;
+      overflow: hidden;
+      width: 30px;
+      height: 5px;
+      border: none;
+      background: #000;
+    }
+  }
+
+  .slick-active button {
+    background-color: #5BA43A;
+  }
+}
+
+//organizer
+
+.organizer{
+
+  .organizer__title{
+    margin-bottom: 60px;
+  }
+
+  .organizer__people{
+    display: flex;
+    justify-content: space-between;
+
+    img{
+      margin-bottom: 10px;
+    }
+
+    .person__title{
+      width: 90%;
+      margin-bottom: 20px;
+      font-size: 22px;
+      line-height: 1.4;
+    }
+
+    .person__line{
+      margin-bottom: 15px;
+      width: 80%;
+    }
+
+    .person__spec{
+      margin-bottom: 30px;
+      font-size: 20px;
+      font-weight: 300;
+    }
+
+    .person__number, .person__email{
+      font-family: "Gilroy", sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .person__number{
+      margin-bottom: 10px;
+    }
+  }
+}
+
+//organization
+
+.organization{
+
+  .organization__wrap{
+    display: flex;
+    justify-content: space-between;
+    
+    .block_green{
+      padding: 70px 0 100px 0;
+      width: 60%;
+      background-color: #5BA43A;
+      text-align: center;
+      position: relative;
+      z-index: 0;
+
+      .block_green__title{
+        margin-bottom: 50px;
+        color: #fff
+      }
+    }
+
+    .block_white:before{
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 600px;
+      background: #fff;
+      z-index: 10;
+      left: -60px;
+      top: 0;
+    }
+
+    .block_white{
+      padding-top: 60px;
+      width: 40%;
+      text-align: center;
+      z-index: 10;
+
+      overflow: hidden;
+      position: relative;
+
+      .block_white__title{
+        text-align: left;
+        font-size: 24px;
+        color: #5BA43A;
+      }
+    }
   }
 }

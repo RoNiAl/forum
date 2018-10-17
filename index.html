@@ -26,7 +26,6 @@
     <!--SLICK SLIDER-->
     <link rel="stylesheet" href="lib/slick.css">
     <script src="lib/slick.min.js"></script>
-    <link rel="stylesheet" href="../Users/Akramion/Desktop/Программирование/sliders/css/slide3.css">
 </head>
 <body>
 
@@ -214,8 +213,88 @@
                     <p class="slider__about">Хороший человек</p>
                 </div>
 
+                <div class="slider__slide">
+                    <img src="image/spec_slide3.png" alt="">
+                    <h4 class="slider__title">Иван Перторв</h4>
+                    <p class="slider__about">Хороший человек</p>
+                </div>
+
             </div>
             <div class="slideshow__arrows"></div>
+        </div>
+    </section>
+
+    <section class="support">
+        <div class="block">
+            <h2 class="support__title">При поддержке</h2>
+            <hr class="line support__line">
+            <div class="support_slider">
+
+                <div class="support__slide">
+                    <img src="image/support_slide1.png" alt="">
+                    <p class="support__text">Правительство Тюменской области</p>
+                </div>
+
+                <div class="support__slide">
+                    <img src="image/support_slide2.png" alt="">
+                    <p class="support__text">Правительство Тюменской области</p>
+                </div>
+
+                <div class="support__slide">
+                    <img src="image/support_slide3.png" alt="">
+                    <p class="support__text">Правительство Тюменской области</p>
+                </div>
+
+                <div class="support__slide">
+                    <img src="image/support_slide2.png" alt="">
+                    <p class="support__text">Правительство Тюменской области</p>
+                </div>
+
+            </div>
+            <div class="support__arrows"></div>
+        </div>
+    </section>
+
+    <section class="organizer">
+        <div class="block">
+            <h2 class="organizer__title">Организационный <br> комитет форума</h2>
+            <hr class="line organizer__line">
+            <div class="organizer__people">
+                <div class="person"><img src="image/comitet1.png" alt="">
+                    <h4 class="person__title">Болотин Владимир Николаевич</h4>
+                    <hr class="line person__line">
+                    <p class="person__spec">Программный директор форума</p>
+                    <p class="person__number">+ 7 (961) 000-00-00</p>
+                    <p class="person__email">e.korotkov@poroglass.ru</p>
+                </div>
+                <div class="person"><img src="image/comitet2.png" alt="">
+                    <h4 class="person__title">Коротков Евгений Анатольевич</h4>
+                    <hr class="line person__line">
+                    <p class="person__spec">Программный директор форума</p>
+                    <p class="person__number">+ 7 (961) 000-00-00</p>
+                    <p class="person__email">e.korotkov@poroglass.ru</p>
+                </div>
+                <div class="person"><img src="image/comitet3.png" alt="">
+                    <h4 class="person__title">Катигарова Ирина Юрьевна</h4>
+                    <hr class="line person__line">
+                    <p class="person__spec">Программный директор форума</p>
+                    <p class="person__number">+ 7 (961) 000-00-00</p>
+                    <p class="person__email">e.korotkov@poroglass.ru</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="organization">
+        <div class="organization__wrap">
+            <div class="block_green">
+                <h2 class="block_green__title">Организаторы</h2>
+                <img src="image/organization_poroglas.png" alt="">
+            </div>
+            <div class="block_white">
+                <h3 class="block_white__title">При поддержке</h3>
+                <img src="image/organization_tumen.png" alt="">
+            </div>
         </div>
     </section>
 
@@ -224,11 +303,24 @@
 
         $(document).ready(function(){
             $('.slider').slick({
-
+                dots: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
                 appendArrows: $('.slideshow__arrows'),
-                prevArrow: '<button class="slideshow__arrow_left slideshow__arrow"><img src="image/left_arrow.png"></button>',
-                nextArrow: '<button class="slideshow__arrow_right slideshow__arrow"><img src="image/right_arrow.png"></button>'
+                prevArrow: '<div class="slideshow__arrow_left slideshow__arrow"><img src="image/left_arrow.png"></div>',
+                nextArrow: '<div class="slideshow__arrow_right slideshow__arrow"><img src="image/right_arrow.png"></div>'
         });
+        });
+
+        $(document).ready(function(){
+            $('.support_slider').slick({
+                dots: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                appendArrows: $('.support__arrows'),
+                prevArrow: '<div class="support__arrow_left support__arrow"><img src="image/left_arrow.png"></div>',
+                nextArrow: '<div class="support__arrow_right support__arrow"><img src="image/right_arrow.png"></div>'
+            });
         });
     </script>
 </body>
