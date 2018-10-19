@@ -12,7 +12,7 @@
 
     <!--Style-->
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
+
 
     <!--Font-->
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400" rel="stylesheet">
@@ -26,23 +26,52 @@
     <!--SLICK SLIDER-->
     <link rel="stylesheet" href="lib/slick.css">
     <script src="lib/slick.min.js"></script>
+
+    <!--UKIT-->
+    <link rel="stylesheet" href="lib/ukit/css/uikit.min.css">
+    <script src="lib/ukit/js/uikit.min.js"></script>
+
+    <script src="lib/ukit/js/core/offcanvas.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="lib/ukit/js/components/parallax.min.js"></script>
 </head>
 <body>
+    <div class="uk-offcanvas" id="my-id">
+        <div class="uk-offcanvas-bar">
+            <div class="form">
+                <div class="form__header">
+                    <a href="#my-id" data-uk-offcanvas="{mode:'slide'}" class="offcanvas__exit"></a>
+                    <img src="image/contacts_logo.png" alt="" width="230px" height="40px">
+                </div>
+                <h2 class="header__title">Стать участником</h2>
+                <form action="" method="POST">
+                    <input type="text" class="header__input" placeholder="Ваше имя">
+                    <input type="text" class="header__input" placeholder="Ваша фамилия">
+                    <input type="text" class="header__input" placeholder="Организация">
+                    <input type="text" class="header__input" placeholder="Должность">
+                    <input type="text" class="header__input" placeholder="Телефон">
+                    <input type="text" class="header__input" placeholder="Email">
+                    <p class="header__help">Нажимая кнопку отправить, Вы соглашаетесь с политикой обработки персональных данных</p>
+                    <input type="submit" class="btn btn__form" value="Отправить">
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!--NAVIGATION-->
     <div class="header__wrap">
         <nav class="nav">
             <div class="nav__elements">
-                <div class="nav__element"><a href="#">Организаторы</a></div>
-                <div class="nav__element"><a href="#">Аудитория</a></div>
-                <div class="nav__element"><a href="#">Организаторы</a></div>
-                <div class="nav__element"><a href="#">Эксперты</a></div>
-                <div class="nav__element"><a href="#">Программа</a></div>
-                <div class="nav__element"><a href="#">Стоимость</a></div>
-                <div class="nav__element"><a href="#">Контакты</a></div>
+                <div class="nav__element"><a href="#organizations" data-uk-smooth-scroll>Организаторы</a></div>
+                <div class="nav__element"><a href="#audience" data-uk-smooth-scroll>Аудитория</a></div>
+                <div class="nav__element"><a href="#content" data-uk-smooth-scroll>Содержание</a></div>
+                <div class="nav__element"><a href="#experts" data-uk-smooth-scroll>Эксперты</a></div>
+                <div class="nav__element"><a href="#program" data-uk-smooth-scroll>Программа</a></div>
+                <div class="nav__element"><a href="#price" data-uk-smooth-scroll>Стоимость</a></div>
+                <div class="nav__element"><a href="#contacts" data-uk-smooth-scroll>Контакты</a></div>
             </div>
             <div class="nav__btn">
-                <button class="btn btn_nav">Стать участником</button>
+                <a href="#my-id" data-uk-offcanvas="{mode:'slide'}" class="btn btn_nav">Стать участником</a>
             </div>
         </nav>
     </div>
@@ -55,17 +84,19 @@
                 <p class="main__conf">Международная научно-практическая конференция</p>
                 <h1 class="main__title">Применение пеностекольных и пеностеколокерамических материалов в дорожном хозяйстве</h1>
                 <hr class="line">
-                <a href="#" class="btn btn_info">Стать участником</a>
+                <a href="#my-id" data-uk-offcanvas="{mode:'slide'}"  class="btn btn_info">Стать участником</a>
                 <time class="main__date">11 - 12 ноября 2018</time>
                 <p class="main__address">Западно-сибирский Иновационный Центр, Тюменский технопарк улица Руспублики, 142
                     <br> Зал: Международный конгресс-холл</p>
+                <a href="#my-id" data-uk-offcanvas="{mode:'slide'}" class="btn btn_hide">Стать участником</a>
             </div>
-            <div class="main__bg">
+            <div class="main__bg" data-uk-parallax="{bg: '-300'}">
 
             </div>
+
         </div>
 
-    <section class="organization">
+    <section class="organization" id="organizations">
         <div class="organization__wrap">
             <div class="block_green">
                 <h2 class="block_green__title">Организаторы</h2>
@@ -86,7 +117,7 @@
 
 
     <!--for whom-->
-    <section class="for-whom">
+    <section class="for-whom" data-uk-parallax="{bg: '-200'}" id="audience">
         <div class="block">
             <h2 class="for-whom__title">Для кого <br> этот форум?</h2>
             <hr class="line for-whom__line">
@@ -99,15 +130,15 @@
                 <li class="list-prof__element"><span>06</span><p class="list-prof__text">Ученые и научные сотрудники</p></li>
             </ul>
             <div class="for-whom__buttons">
-                <a href="" class="btn">Стать участником</a>
-                <a href="" class="btn">Стать докладчиком</a>
+                <a href="#my-id" data-uk-offcanvas="{mode:'slide'}"  class="btn">Стать участником</a>
+                <a href="#my-id" data-uk-offcanvas="{mode:'slide'}"  class="btn">Стать докладчиком</a>
             </div>
         </div>
     </section>
 
     <!--Секции-->
 
-    <section class="sections">
+    <section class="sections" id="content">
         <div class="block">
             <p class="sections__p">Тематические</p>
             <h2 class="sections__title">Разделы <br> конференции</h2>
@@ -121,7 +152,7 @@
                         <p class="list-sections__text">Применение пеноситекольных и пеностеклакерамических теплоизоляционных материалов в автодорожном и железнодорожном строительстве
                         </p>
                     </div>
-                    <div class="list-sections__bg list-sections__bg_left"></div>
+                    <div class="list-sections__bg list-sections__bg_left" style="background-image: url('image/sections-1.png'); " data-uk-parallax="{bg: '-100'}"></div>
                 </li>
 
                 <li class="list-sections__element">
@@ -130,7 +161,7 @@
                         <hr class="line list-sections__line">
                         <p class="list-sections__text">Сырьевые базы для производства: стекольный бой (твердо-коммунальные отходы) и общераспространённые полезные ископаемые</p>
                     </div>
-                    <div class="list-sections__bg"></div>
+                    <div class="list-sections__bg"  style="background-image: url('image/sections-2.png');" data-uk-parallax="{bg: '-100'}"></div>
                 </li>
 
                 <li class="list-sections__element">
@@ -140,7 +171,7 @@
                         <p class="list-sections__text">Оборудование и технологические линии для производства пеностекольных и пеностеклокерамических материалов, импортозамещение
                         </p>
                     </div>
-                    <div class="list-sections__bg list-sections__bg_left"></div>
+                    <div class="list-sections__bg list-sections__bg_left"  style="background-image: url('image/sections-3.png');" data-uk-parallax="{bg: '-100'}"></div>
                 </li>
 
                 <li class="list-sections__element">
@@ -149,58 +180,59 @@
                         <hr class="line list-sections__line">
                         <p class="list-sections__text">Анализ и прогноз развития российского рынка пеностекольных и пеностеклокерамических материалов</p>
                     </div>
-                    <div class="list-sections__bg"></div>
+                    <div class="list-sections__bg"  style="background-image: url('image/sections-4.png');" data-uk-parallax="{bg: '-100'}"></div>
                 </li>
 
             </ul>
         </div>
     </section>
 
-    <section class="specialists">
+    <section class="specialists" id="experts">
         <div class="block">
             <h2 class="specialists__title">Эксперты и докладчики форума</h2>
-            <hr class="line">
+            <hr class="line specialists__line">
             <div class="slider">
 
                 <div class="slider__slide">
-                    <img src="image/spec_slide1.png" alt="">
-                    <h4 class="slider__title">Иван Перторв</h4>
-                    <p class="slider__about">Хороший человек</p>
+                    <img src="image/bolotin.png" alt="">
+                    <h4 class="slider__title">Болотин Владимир Николаевич</h4>
+                    <p class="slider__about">Председатель организационного комитета</p>
                 </div>
 
                 <div class="slider__slide">
-                    <img src="image/spec_slide2.png" alt="">
-                    <h4 class="slider__title">Иван Перторв</h4>
-                    <p class="slider__about">Хороший человек</p>
+                    <img src="image/ladner.jpg" alt="">
+                    <h4 class="slider__title">Ладнер Валерий Владимирович</h4>
+                    <p class="slider__about">Начальник управления промышленности и предпринимательства, Департамента инвестиционной политики Тюменской области</p>
                 </div>
 
                 <div class="slider__slide">
-                    <img src="image/spec_slide3.png" alt="">
-                    <h4 class="slider__title">Иван Перторв</h4>
-                    <p class="slider__about">Хороший человек</p>
+                    <img src="image/smirnov.png" alt="">
+                    <h4 class="slider__title">Смирнов Антон Павлович</h4>
+                    <p class="slider__about">Директор программ технологического развития ПАО Газпромнефть НТЦ</p>
                 </div>
 
                 <div class="slider__slide">
-                    <img src="image/spec_slide3.png" alt="">
-                    <h4 class="slider__title">Иван Перторв</h4>
-                    <p class="slider__about">Хороший человек</p>
+                    <img src="image/korotkov.jpg" alt="">
+                    <h4 class="slider__title">Коротков Евгений Анатольевич</h4>
+                    <p class="slider__about">технический директор ООО "ПороГлассГруп"</p>
                 </div>
+
 
             </div>
             <div class="slideshow__arrows"></div>
         </div>
     </section>
 
-    <section class="program">
+    <section class="program" id="program">
         <div class="program__wrap">
             <div class="program__left-info">
                 <div class="left-info__wrap">
                     <h2 class="program__title">Программа форума</h2>
                     <p class="program__text">Заполните форму, и мы направим вам на почту программу</p>
-                    <a href="#" class="btn btn_program">Получить программу</a>
+                    <a href="#my-id" data-uk-offcanvas="{mode:'slide'}"  class="btn btn_program">Получить программу</a>
                 </div>
             </div>
-            <div class="program__right-bg">
+            <div class="program__right-bg" data-uk-parallax="{bg: '-300'}">
 
             </div>
         </div>
@@ -208,7 +240,7 @@
 
     <!--PRICE-->
 
-    <section class="price">
+    <section class="price" id="price">
         <div class="block">
             <h2 class="price__title">Стоимость <br> участия</h2>
             <div class="price__wrap">
@@ -225,14 +257,16 @@
                         <li class="price__item">участие в развлекательной программе</li>
                         <li class="price__item">фотоматериалы с форума (рассылка после форума)</li>
                     </ul>
+                    <a href="#my-id" data-uk-offcanvas="{mode:'slide'}" class="btn btn__hide">Зарегистрироваться</a>
                 </div>
 
                 <div class="price__item">
-                    <h3 class="price__roll">Участник</h3>
-                    <p class="price__sum">15 000 Р</p>
+                    <h3 class="price__roll">Докладчик</h3>
+                    <p class="price__sum">20 000 Р</p>
                     <p class="price__include">Включено</p>
                     <hr class="price__line">
                     <ul class="price__list">
+                        <li class="price__item">возможность выступить с докладом на форуме 13 ноября 2018 (после согласования темы организационным комитетом)</li>
                         <li class="price__item">участие в конференции 12-13 ноября 2018</li>
                         <li class="price__item">входной пакет с раздаточными материалами</li>
                         <li class="price__item">доступ к информационным материалам и презентациям докладчиков (после форума)</li>
@@ -240,7 +274,12 @@
                         <li class="price__item">участие в развлекательной программе</li>
                         <li class="price__item">фотоматериалы с форума (рассылка после форума)</li>
                     </ul>
+
                 </div>
+            </div>
+            <div class="btn__wrap">
+                <a href="#my-id" data-uk-offcanvas="{mode:'slide'}" class="btn price__btn btn__hide">Зарегистрироваться</a>
+                <a href="#my-id" data-uk-offcanvas="{mode:'slide'}" class="btn price__btn">Зарегистрироваться</a>
             </div>
         </div>
     </section>
@@ -314,7 +353,7 @@
         </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div id="contacts__map"></div>
         <div class="block contacts__block">
             <div class="contacts__info">
@@ -334,28 +373,218 @@
     </section>
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChISwH7C6v2UXCmb587PPhKfwYP3LXc5Y">
-
-    </script>
-    <script>
-
-        function initialize() {
-            var myLatlng = new google.maps.LatLng(-34.397, 150.644);
-            var myOptions = {
-                zoom: 8,
-                center: myLatlng,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            }
-            var map = new google.maps.Map(document.getElementById("contacts__map"), myOptions);
+    <script type="text/javascript">
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('contacts__map'), {
+                center: {lat: -34.397, lng: 150.644},
+                draggable: !("ontouchend" in document),
+                disableDefaultUI: true,
+                zoom: 16,
+                styles: [
+                    {
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#212121"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#757575"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "color": "#212121"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#757575"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.country",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#9e9e9e"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.land_parcel",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.locality",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#bdbdbd"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#757575"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#181818"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#616161"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "color": "#1b1b1b"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "color": "#2c2c2c"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#8a8a8a"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#373737"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#3c3c3c"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway.controlled_access",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#4e4e4e"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#616161"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#757575"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#000000"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#3d3d3d"
+                            }
+                        ]
+                    }
+                ]
+            });
         }
 
-        initialize();
+        initMap();
+    </script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDz-fa3z3jDQhfL6rwyNt3DEJ3XHbyoUHk&callback=initMap" async></script>
+
+    <script>
+
+
 
 
         $(document).ready(function(){
+            if(screen.width < 700) var slides = 1;
+            else var slides = 3;
             $('.slider').slick({
                 dots: true,
-                slidesToShow: 3,
+                slidesToShow: slides,
                 slidesToScroll: 1,
                 appendArrows: $('.slideshow__arrows'),
                 prevArrow: '<div class="slideshow__arrow_left slideshow__arrow"><img src="image/left_arrow.png"></div>',
@@ -364,15 +593,18 @@
         });
 
         $(document).ready(function(){
+            if(screen.width < 700) var slides = 1;
+            else var slides = 3;
             $('.support_slider').slick({
                 dots: true,
-                slidesToShow: 3,
+                slidesToShow: slides,
                 slidesToScroll: 1,
                 appendArrows: $('.support__arrows'),
                 prevArrow: '<div class="support__arrow_left support__arrow"><img src="image/left_arrow.png"></div>',
                 nextArrow: '<div class="support__arrow_right support__arrow"><img src="image/right_arrow.png"></div>'
             });
         });
+
     </script>
 
 
